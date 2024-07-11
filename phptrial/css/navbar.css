@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.nav-link {
+    font-weight: 700;
+    transition: all 0.5s;
+    position: relative;
+}
+.nav-link:hover::after {
+    content: '';
+    height: 3.5px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    /* animation: bar 1s infinite alternate; */
+}
+.active{
+    transition: all 1s;
+    background-color:rgb(203, 210, 229);
+    border-radius:10px;
+}
+
+@keyframes bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Jumbotron */
+.jumbotron {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.jumbotron p {
+    font-size: 1.1rem;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+}
+
+.about .container-fluid {
+    padding: 4rem 0;
+}
+
+.about .description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about .description p {
+    font-size: 1rem;
+}
+
+.about-btn {
+    margin-top: 2rem;
+}
+
+/* Service Section */
+.service {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.service h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service .btn {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.service .btn:hover {
+    background-color: #333;
+    color: #ddd;
+}
+
+.service .image1 img,
+.service .image img {
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.service .image1:hover img,
+.service .image:hover img {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about .description h3 {
+        font-size: 1.5rem;
+    }
+
+    .service h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .jumbotron h1 {
+        font-size: 1.5rem;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about .description h3 {
+        font-size: 1.3rem;
+    }
+
+    .service h2 {
+        font-size: 1.8rem;
+    }
+}
+.btn{
+    background-color: gray;
+    border: 1px solid gray;
+    color:black;
+}
